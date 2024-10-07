@@ -4,7 +4,7 @@ import {
   addContact,
   deleteContact,
 } from "../contacts/operations";
-import { logOut } from "../auth/operation";
+import { logOut } from "../auth/operations";
 
 const slice = createSlice({
   name: "contacts",

@@ -1,7 +1,7 @@
-import { logOut } from "../../redux/auth/operation";
+import { logOut } from "../../redux/auth/operations";
 import { selectUser } from "../../redux/auth/selectors";
 import { useDispatch, useSelector } from "react-redux";
-import css from './UserMenu.module.css'
+import css from "./UserMenu.module.css";
 
 export default function UserMenu() {
   const user = useSelector(selectUser);

@@ -1,13 +1,14 @@
 import { useEffect, lazy } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { Bars } from "react-loader-spinner";
 import { selectLoading, selectError } from "../../redux/contacts/selectors";
 import { Layout } from "../Layout/Layout";
 import { Routes, Route } from "react-router-dom";
-import { refreshUser } from "../../redux/auth/operation";
+import { refreshUser } from "../../redux/auth/operations";
 import { selectIsRefresing } from "../../redux/auth/selectors";
 import RestictedRoute from "../RestrictedRoute/RestrictedRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import { Hourglass } from "react-loader-spinner";
+import css from "./App.module.css";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 const RegisterPage = lazy(() =>
@@ -17,8 +18,6 @@ const LoginPage = lazy(() => import("../../pages/LoginPage/LoginPage"));
 const ContactsPage = lazy(() => import("../../pages/ContactsPage/ContactPage"));
 
 export default function App() {
-  const loading = useSelector(selectLoading);
-  const error = useSelector(selectError);
 
   const dispatch = useDispatch();
 
@@ -29,7 +28,9 @@ export default function App() {
   const isRefresing = useSelector(selectIsRefresing);
 
   return isRefresing ? (
-    <p>please wait</p>
+    <div className={css.spiner}>
+      <Hourglass />
+    </div>
   ) : (
     <Layout>
       <Routes>
