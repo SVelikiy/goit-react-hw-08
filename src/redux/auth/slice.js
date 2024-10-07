@@ -1,5 +1,5 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
-import { register, logIn, logOut, refreshUser } from "./operation";
+import { register, logIn, logOut, refreshUser } from "./operations";
 
 const initialState = {
   user: {

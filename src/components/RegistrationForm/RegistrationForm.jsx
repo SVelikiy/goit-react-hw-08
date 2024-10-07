@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { nanoid } from "nanoid";
 import { useDispatch, useSelector } from "react-redux";
 import * as Yup from "yup";
-import { register } from "../../redux/auth/operation";
+import { register } from "../../redux/auth/operations";
 import { selectIsError, selectIsLoading } from "../../redux/auth/selectors";
 import css from "./RegistrationForm.module.css";
 import { Hourglass } from "react-loader-spinner";
