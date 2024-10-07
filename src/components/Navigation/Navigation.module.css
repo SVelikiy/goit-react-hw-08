@@ -1,0 +1,14 @@
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.textNav {
+  color: rgb(73, 72, 72);
+  font-size: 20px;
+  transition: color 1ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.textNav:hover {
+  color: blue;
+}

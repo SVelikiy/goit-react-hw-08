@@ -1,0 +1,12 @@
+.contactContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px 0 5px;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;  
+}
